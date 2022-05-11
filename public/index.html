@@ -1,32 +1,44 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Socket.IO chat</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-  </head>
-  <body>
-    <h1>Chat</h1>
-    <div id="userContainer"></div>
-    <div id="user">
-      <form id="formUser">
-        <input type="text" id="inputUser"><button>Write your name</button>
-      </form>
-    </div>
-    <div id="message">
-    <form id="formMessage">
-      <input type="text" id="inputMessage"><button>Send a message</button>
-    </form>
-    </div>
-    <h2>Chat message</h2>
-    <ul id="messages"></ul>
+    <head>
+        <title>Socket.IO chat</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+    </head>
+    <body>
+        <div class="userWrapper">
+            <div id="userContainer"></div>
+            <h1>Chat and dice throw</h1>
+            <div id="user">
+                <form id="formUser">
+                    <input type="text" id="inputUser" /><button>
+                        Write your name
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="container">
+                <div class="header">
+                    <h2>WebChat</h2>
+                </div>
+                <div class="body">
+                    <ul class="message"></ul>
+                </div>
+                <div class="footer">
+                    <form id="formMessage">
+                        <input type="text" id="inputMessage" />
+                        <button>SEND</button>
+                    </form>
+                </div>
+            </div>
+        </div>
 
-    <button id="throwDice">Throw dice</button>
+        <div id="diceContainer">
+            <button id="throwDice">Throw dice</button>
+            <ul id="diceThrows"></ul>
+        </div>
 
-    
-    <div id="diceContainer">
-        <ul id="diceThrows"></ul>
-    </div>
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="client.js"></script>
-  </body>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="client.js"></script>
+    </body>
 </html>
